@@ -1,4 +1,4 @@
-# how to install MariaDB on Linux Mint
+# process how to install MariaDB on Linux Mint
 Buka terminal Linux Mint lalu buka Firefox, ketik "MariaDB docs" di search bar. Setelah itu klik "Getting Started" lalu klik "Installation Guides". Untuk Linux Mint, pilih Install the MariaDB server and client packages; For Debian/Ubuntu:Bash dan copy sudo apt install mariadb-server mariadb-client, kemudian paste di terminal. Masukkan password Linux Mint kamu, tekan Enter, lalu pilih "Yes" jika muncul confirmation tab. Setelah semua langkah di atas telah dilakukan, MariaDB akan terupdate secara otomatis.
-## error
+# process how to install MongoDB on Linux Mint
 ## resolve
