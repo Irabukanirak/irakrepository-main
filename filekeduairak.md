@@ -1,0 +1,1 @@
+# how to install VSCode on Linux Mint
