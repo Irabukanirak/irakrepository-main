@@ -1,4 +1,5 @@
 # process how to install MariaDB on Linux Mint
 Buka terminal Linux Mint lalu buka Firefox, ketik "MariaDB docs" di search bar. Setelah itu klik "Getting Started" lalu klik "Installation Guides". Untuk Linux Mint, pilih Install the MariaDB server and client packages; For Debian/Ubuntu:Bash dan copy sudo apt install mariadb-server mariadb-client, kemudian paste di terminal. Masukkan password Linux Mint kamu, tekan Enter, lalu pilih "Yes" jika muncul confirmation tab. Setelah semua langkah di atas telah dilakukan, MariaDB akan terupdate secara otomatis.
 # process how to install MongoDB on Linux Mint
+Buka situs www.mongodb.com di Firefox kemudian klik "Resources", pilih "Server Documentation", lanjutkan ke "MongoDB Community", dan klik "Install on Linux". Karena menggunakan Linux Mint, pilih opsi "Install on Ubuntu" karena paling mendekati. Copy import the public key gnupg dan curl, lalu paste di terminal dan tekan Enter. Setelah itu, copy sudo apt-get update, paste di dalam terminal, dan tekan Enter. Lakukan hal yang sama dengan sudo apt-get install -y mongodb-org, lalu tekan Enter. Dengan begitu, proses pengunduhan MongoDB selesai.
 ## resolve
