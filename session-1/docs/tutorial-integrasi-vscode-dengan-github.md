@@ -1,1 +1,3 @@
-
+# Tutorial Cara Integrasi VSCode dengan Github
+Buka terminal, lalu ketik command git config --global user.name "Your Name", ganti nama kamu di "Your Name" dan pencet Enter. Lalu ketik git config --global user.email "your.email@example.com",  ganti dengan email Github kamu di di "your.email@example" dan pencet Enter. Buka Github; pergi ke halaman repository yang sudah kamu buat. Salin URL HTTPS. Buka terminal, ketik git clone https://github.com/nama-kamu/nama-proyek-git. Tunggu hingga proses selesai. Sekarang folder proyek sudah ada di komputer.
+Buka VSCode, pilih file dan klik open folder. Navigasikan ke folder proyek yang baru saja kamu clone. Di dalam VSCode, buat file-file dokumentasi dan tulis isinya. Setelah langkah-langkah sebelumnya sudah terlaksanakan, maka kamu bisa menulis dokumentasi dan nanti mengunggahnya ke Github dari dalam VSCode.
