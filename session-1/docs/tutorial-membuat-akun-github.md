@@ -1,1 +1,2 @@
-
+# Tutorial Cara Membuat Akun Github
+Untuk membuat akun GitHub, pertama buka browser lalu kunjungi [github](https://github.com), kemudian klik **Sign up**. Isi alamat email, sandi, dan username. Setelah mengisi data, GitHub akan meminta kamu menyelesaikan captcha untuk memastikan bahwa kamu bukan bot, lalu mengirimkan kode verifikasi ke email. Buka gmail, salin kodenya, lalu tempelkan kembali di Github. Setelah akun berhasil dibuat, kamu bisa mengatur profil dengan mengunggah foto dan menambahkan bio (opsional). Setelah semua selesai, akun GitHub siap digunakan.
