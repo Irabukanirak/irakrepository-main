@@ -1,4 +1,4 @@
-# Tutorial Cara Membuat Akun Github
+# Tutorial Membuat Akun Github
 ## Step 1: Buka Website Github
 Untuk membuat akun GitHub, pertama buka browser lalu kunjungi [github](https://github.com) 
 ## Step 2: Buat Akun dan Isi Data Diri

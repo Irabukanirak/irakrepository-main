@@ -1,4 +1,4 @@
-# Tutorial Cara Menginstal MariaDB di Linux Mint
+# Tutorial Menginstal MariaDB di Linux Mint
 ## Step 1: Buka Website MariaDB Docs
 Buka terminal Linux Mint lalu buka Firefox, ketik "MariaDB docs" di search bar atau klik link di sini [MariaDB](https://mariadb.com/docs). 
 ## Step 2: Installation Guides
