@@ -9,4 +9,3 @@ Untuk Linux Mint, pilih Install the MariaDB server and client packages; For Debi
 ![alt text](<Screenshot from 2025-09-22 10-52-35.png>)
 ## Step 3: Paste Command di Terminal
 Kemudian paste di terminal. Masukkan password Linux Mint kamu, tekan Enter, lalu pilih "Yes" jika muncul confirmation tab. Setelah semua langkah di atas telah dilakukan, maka MariaDB sudah terinstal.
-![alt text](<Screenshot from 2025-09-22 11-17-38.png>)
