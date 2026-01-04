@@ -1,1 +1,160 @@
 
+/*M!999999\- enable the sandbox mode */ 
+-- MariaDB dump 10.19  Distrib 10.11.13-MariaDB, for debian-linux-gnu (x86_64)
+--
+-- Host: localhost    Database: gundala_ekspres
+-- ------------------------------------------------------
+-- Server version	10.11.13-MariaDB-0ubuntu0.24.04.1
+
+/*!40101 SET @OLD_CHARACTER_SET_CLIENT=@@CHARACTER_SET_CLIENT */;
+/*!40101 SET @OLD_CHARACTER_SET_RESULTS=@@CHARACTER_SET_RESULTS */;
+/*!40101 SET @OLD_COLLATION_CONNECTION=@@COLLATION_CONNECTION */;
+/*!40101 SET NAMES utf8mb4 */;
+/*!40103 SET @OLD_TIME_ZONE=@@TIME_ZONE */;
+/*!40103 SET TIME_ZONE='+00:00' */;
+/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
+/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
+/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
+/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
+
+--
+-- Table structure for table `jadwal`
+--
+
+DROP TABLE IF EXISTS `jadwal`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8mb4 */;
+CREATE TABLE `jadwal` (
+  `id_jadwal` int(11) NOT NULL AUTO_INCREMENT,
+  `nama_kereta` varchar(60) DEFAULT NULL,
+  `jam_berangkat` time NOT NULL,
+  `jam_tiba` time NOT NULL,
+  `hari_operasional` varchar(50) DEFAULT NULL,
+  PRIMARY KEY (`id_jadwal`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `jadwal`
+--
+
+LOCK TABLES `jadwal` WRITE;
+/*!40000 ALTER TABLE `jadwal` DISABLE KEYS */;
+INSERT INTO `jadwal` VALUES
+(1,'Tumapel','18:25:00','22:25:00','Senin-Kamis'),
+(2,'Dedes','18:48:00','04:32:00','Senin-Jumat'),
+(3,'Pattimura','07:35:00','10:49:00','Senin-Kamis'),
+(4,'Argo Jati','19:00:00','01:52:00','Setiap Hari'),
+(5,'Kadita','20:00:00','23:30:00','Setiap Hari');
+/*!40000 ALTER TABLE `jadwal` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `kereta_ekspres`
+--
+
+DROP TABLE IF EXISTS `kereta_ekspres`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8mb4 */;
+CREATE TABLE `kereta_ekspres` (
+  `id_kereta_ekspres` int(11) NOT NULL AUTO_INCREMENT,
+  `Rute_Asal` varchar(90) NOT NULL,
+  `Rute_Tujuan` varchar(90) NOT NULL,
+  `Nama_Kereta` varchar(90) NOT NULL,
+  `Jam_Berangkat` time NOT NULL,
+  `Jam_Tiba` time NOT NULL,
+  `Nomor_Tiket` varchar(10) NOT NULL,
+  `Nama_Penumpang` varchar(50) NOT NULL,
+  `Tanggal_Perjalanan` date NOT NULL,
+  `Kelas` enum('Eksekutif','Bisnis','Ekonomi') NOT NULL,
+  `Harga_Tiket` decimal(10,2) NOT NULL,
+  PRIMARY KEY (`id_kereta_ekspres`),
+  UNIQUE KEY `Nomor_Tiket` (`Nomor_Tiket`)
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `kereta_ekspres`
+--
+
+LOCK TABLES `kereta_ekspres` WRITE;
+/*!40000 ALTER TABLE `kereta_ekspres` DISABLE KEYS */;
+/*!40000 ALTER TABLE `kereta_ekspres` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `rute`
+--
+
+DROP TABLE IF EXISTS `rute`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8mb4 */;
+CREATE TABLE `rute` (
+  `id_rute` int(11) NOT NULL AUTO_INCREMENT,
+  `nama_rute` varchar(100) NOT NULL,
+  `asal` varchar(100) NOT NULL,
+  `tujuan` varchar(100) NOT NULL,
+  `jarak_km` decimal(5,2) DEFAULT NULL,
+  PRIMARY KEY (`id_rute`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `rute`
+--
+
+LOCK TABLES `rute` WRITE;
+/*!40000 ALTER TABLE `rute` DISABLE KEYS */;
+INSERT INTO `rute` VALUES
+(1,'Rute P','Semarang Tawang','Surabaya Pasar Turi',148.00),
+(2,'Rute B','Surabaya Gubeng','Pasar Senen',820.00),
+(3,'Rute E','Bandung','Banjar',142.80),
+(4,'Rute A','Bandung','Yogyakarta',518.20),
+(5,'Rute D','Surabaya Kota','Blitar',200.50);
+/*!40000 ALTER TABLE `rute` ENABLE KEYS */;
+UNLOCK TABLES;
+
+--
+-- Table structure for table `tiket`
+--
+
+DROP TABLE IF EXISTS `tiket`;
+/*!40101 SET @saved_cs_client     = @@character_set_client */;
+/*!40101 SET character_set_client = utf8mb4 */;
+CREATE TABLE `tiket` (
+  `id_tiket` int(11) NOT NULL AUTO_INCREMENT,
+  `nomor_tiket` varchar(10) NOT NULL,
+  `nama_penumpang` varchar(90) NOT NULL,
+  `seat_number` varchar(20) NOT NULL,
+  `tanggal_berangkat` date NOT NULL,
+  `harga_tiket` decimal(10,2) NOT NULL,
+  PRIMARY KEY (`id_tiket`),
+  UNIQUE KEY `nomor_tiket` (`nomor_tiket`)
+) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
+/*!40101 SET character_set_client = @saved_cs_client */;
+
+--
+-- Dumping data for table `tiket`
+--
+
+LOCK TABLES `tiket` WRITE;
+/*!40000 ALTER TABLE `tiket` DISABLE KEYS */;
+INSERT INTO `tiket` VALUES
+(1,'GUE26','Ermawati','GUK30','2025-10-28',250000.00),
+(2,'GUE100','Supriyanto','GUK102','2025-10-27',150000.00),
+(3,'GUE101','Hermawan','GUK105','2025-10-27',150000.00),
+(4,'GUE113','Muhammad Pandu','GUK23','2025-10-27',300000.00),
+(5,'GUE45','Dewi Rahayu','GUK14','2025-10-28',350000.00);
+/*!40000 ALTER TABLE `tiket` ENABLE KEYS */;
+UNLOCK TABLES;
+/*!40103 SET TIME_ZONE=@OLD_TIME_ZONE */;
+
+/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
+/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
+/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
+/*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
+/*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
+/*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
+/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+
+-- Dump completed on 2025-10-29 13:45:38
