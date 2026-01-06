@@ -13,7 +13,7 @@ Pilih database yang akan dipakai dengan menggunakan syntax:
 
 `USE irakassginments;`
 
-==Perlu diingat bahwa command ini penting untuk digunakan, bila tidak maka data yang sudah dibuat akan tersimpan di tempat lain.==.
+Perlu diingat bahwa command ini penting untuk digunakan, bila tidak maka data yang sudah dibuat akan tersimpan di tempat lain.
 
 ## 3. Membuat Tabel
 Untuk membuat tabel, kamu perlu menggunakan command `CREATE TABLE`. Command ini digunakan untuk membuat struktur tabel di dalam database. Jadi, sebelum menyimpan data, kita perlu membuat "wadah" -nya dulu. 
@@ -40,7 +40,7 @@ Diibaratkan Tabel adalah botol minum dan INSERT INTO adalah air yang mengisi bot
 ('literasi informasi', '2025-10-24', 'belum selesai'),
 ('sarana tata ruang perpus', '2025-10-09', 'selesai');`
 
-== id_tugas AUTO_INCREMENT, tidak perlu diisi manual==.
+id_tugas AUTO_INCREMENT, tidak perlu diisi manual.
 
 ## 6. Menampilkan Data 
 Bila kamu ingin melihat hasil isi database yang baru saja kamu buat, kamu bisa menggunakan `SELECT * FROM tugas;`
